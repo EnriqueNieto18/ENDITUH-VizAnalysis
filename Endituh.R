@@ -10,11 +10,10 @@ library(hexbin)
 library(ggpubr)
 library(gridExtra)
 
-####Empezando el ódigo
+####Empezando el Ã³digo
 #Subiendo la base sobre Redes sociales
 
-tr_endutih_usuario_anual_2020 <- read_csv(
-  "Social Media/Edituh/tr_endutih_usuario_anual_2020.csv") #Cargar datos
+tr_endutih_usuario_anual_2020 <- read_csv( "/tr_endutih_usuario_anual_2020.csv") #Cargar datos
 tr_endutih_usuario_anual_2020[
   ,c(5,9,11,13,114:125)]->Endutih ##Filtro de columnas que interesan
 Endutih[1:11]->Endutih
@@ -41,11 +40,11 @@ fb1<-glm(Facebook~SEXO + ESTRATO, family = binomial(link = "logit"),
          data = Endutih)
 ig1<-glm(Instagram~SEXO + ESTRATO, family = binomial(link = "logit"),
          data = Endutih)
-#Creación de tablas Latex
+#CreaciÃ³n de tablas Latex
 stargazer(ig,fb)
 stargazer(ig1,fb1)
 
-#Prueba de código
+#Prueba de cÃ³digo
 En$Respuesta[En$Respuesta==2]<-0
 prob<-glm(Respuesta~ EDAD + Red, family = binomial(link = "probit"), data = En)
 summary(prob)
@@ -62,14 +61,14 @@ RedesFrame1 <- read_csv("Social Media/Edituh/RedesFrame1.csv")
 RedesFrame1<-  RedesFrame1 %>% filter(EDAD<70 &
                                         Respuesta=="Si" & Red!="LinkedIn")
 
-# Gráfica con multiples lines Redes sociales
+# GrÃ¡fica con multiples lines Redes sociales
 ggplot(RedesFrame1, aes(EDAD,Porcentaje, col=Red)) +
   geom_smooth() + geom_point() + facet_wrap(reorder(~Red), scales="free") + 
   theme_minimal() + 
   labs(title=
-         "Porcentaje de usuarios con una cuenta por red social en México 2020",
+         "Porcentaje de usuarios con una cuenta por red social en MÃ©xico 2020",
        y="% de cuentas por edad",
-       caption="Elaboración propia con datos de ENDUTIH"
+       caption="ElaboraciÃ³n propia con datos de ENDUTIH"
        , x="Edad", ylim=c(0,100)) +
   scale_x_continuous(breaks = seq(5,70,15)) + 
   scale_y_continuous(limits = c(0,100)) +
@@ -90,7 +89,7 @@ ggplot(Dispostivos, aes(reorder(Dispositivo, -Porcentaje), Porcentaje)) +
         axis.title = element_text(size=20)) +
   labs(y="Porcentaje %", x="Dispositivo", 
        title="Dispostivos con los que se entro una vez a internet (Porcentaje)" ,
-       caption = "Fuente: Elaboración propia con datos de la ENDUTIH 2020") +  
+       caption = "Fuente: ElaboraciÃ³n propia con datos de la ENDUTIH 2020") +  
   geom_text(size=7, aes(label = paste(format(Porcentaje), "%")), vjust = -0.5) 
 
 
@@ -111,7 +110,7 @@ Mco<-data.frame(tr_endutih_usuario_anual_2020$P7_4,
 )
 #Nombres columnas
 colnames(Mco)<-c("Horas","Edad","Estrato","Sexo","Nivel","Grado", 
-                 "Mensajería", 
+                 "MensajerÃ­a", 
                  "Video Streaming",
                  "Musica streaming",
                  "Taxi App",
@@ -137,7 +136,7 @@ Endituh2<-data.frame(tr_endutih_usuario_anual_2020$EDAD,
 
 colnames(Endituh2)<-c("Edad","Estrato","Sexo","Nivel","Grado","Gasto")
 
-## Filtro gasto por telefonía... 
+## Filtro gasto por telefonÃ­a... 
 Endituh3<-Endituh2 %>% filter(Gasto<2500)
 
 Endituh3<-na.omit(Endituh3)
@@ -150,13 +149,13 @@ Endituh3$Estrato[Endituh3$Estrato==2]<-"Medio"
 Endituh3$Estrato[Endituh3$Estrato==3]<-"Medio-Alto"
 Endituh3$Estrato[Endituh3$Estrato==4]<-"Alto"
 
-#Gráfico
+#GrÃ¡fico
 
 a<-ggplot(Endituh3,
        aes(Edad, Gasto, col=Estrato))  +
-  geom_smooth() + theme_minimal()  +  labs(title = "Gasto Mensual en telefonía celular por estrato socio-económico",
+  geom_smooth() + theme_minimal()  +  labs(title = "Gasto Mensual en telefonÃ­a celular por estrato socio-econÃ³mico",
        y="Gasto ($)",
-       caption = "Elaboración propia con datos de la ENDITUH") 
+       caption = "ElaboraciÃ³n propia con datos de la ENDITUH") 
 
 summary(lm(Endituh3$Gasto~Endituh3$Estrato, method = "gam"))
 lm(Endituh3$Gasto~Endituh3$Estrato, method = "gam")
@@ -165,12 +164,12 @@ lm(Endituh3$Gasto~Endituh3$Estrato, method = "gam")
 
 #Barplot
 Mco1<-Mco %>% gather(Tipo, Respuesta, 7:11)
-Mco1$Respuesta[Mco1$Respuesta==1]<-"Sí"
+Mco1$Respuesta[Mco1$Respuesta==1]<-"SÃ­"
 Mco1$Respuesta[Mco1$Respuesta==2]<-"No"
 
 Mco
 
-Mco2<-Mco1 %>% group_by(Tipo, Estrato, Edad) %>% filter(Respuesta=="Sí" & 
+Mco2<-Mco1 %>% group_by(Tipo, Estrato, Edad) %>% filter(Respuesta=="SÃ­" & 
                                             Grupo==c("Millenial",
                                                      "Gen Z")) %>% 
 summarise(Respuesta=n())
@@ -185,31 +184,31 @@ stargazer(Endutih, type="text")
 
 #Limpieza/Nueva columna
 MCO<-data.frame(Mco2,Mco3$Respuesta)
-colnames(MCO)[3:4]<-c("Sí","No")
-MCO$Respuesta<-MCO$Sí/(MCO$Sí+MCO$No)
+colnames(MCO)[3:4]<-c("SÃ­","No")
+MCO$Respuesta<-MCO$SÃ­/(MCO$SÃ­+MCO$No)
 Mco2<-na.omit(Mco2)
 
 Estrat<-data.frame(Mco2,Mco3$Respuesta)
-colnames(Estrat)[3:4]<-c("Sí","No")
-Estrat$Respuesta<-Estrat$Sí/(Estrat$Sí+Estrat$No)
+colnames(Estrat)[3:4]<-c("SÃ­","No")
+Estrat$Respuesta<-Estrat$SÃ­/(Estrat$SÃ­+Estrat$No)
 Estrat$Estrato[Estrat$Estrato==1]<-"Bajo"
 Estrat$Estrato[Estrat$Estrato==2]<-"Medio"
 Estrat$Estrato[Estrat$Estrato==3]<-"Medio-Alto"
 Estrat$Estrato[Estrat$Estrato==4]<-"Alto"
-## Gráfica estrat
+## GrÃ¡fica estrat
 
 ab<-ggplot(Estrat, aes(reorder(Tipo, -Respuesta),Respuesta,
                    fill=(reorder(Estrato, -Respuesta)))) + 
   geom_bar(stat="identity", position="dodge") +
   scale_y_percent() + 
   theme_minimal() + scale_fill_viridis_d() +
-     labs(title="Penetración de tipo de App por estrato (Gen Z y Millenial)", 
-       caption="Elaboración propia con datos de la ENDITUH",
-       fill="Estrato Socio-Económico", x="Tipo App")#Gev vs Gen
+     labs(title="PenetraciÃ³n de tipo de App por estrato (Gen Z y Millenial)", 
+       caption="ElaboraciÃ³n propia con datos de la ENDITUH",
+       fill="Estrato Socio-EconÃ³mico", x="Tipo App")#Gev vs Gen
 
 #Gev vs Gen
 
-#Gráficando barras
+#GrÃ¡ficando barras
 
 ggplot(MCO, aes(Grupo,Respuesta,fill=reorder(Tipo, -Respuesta))) + 
          geom_bar(stat="identity", position = "dodge") +
@@ -220,9 +219,9 @@ ac<-ggplot(MCO, aes(reorder(Tipo, -Respuesta),Respuesta,fill=(Grupo))) +
   geom_bar(stat="identity", position="dodge") +
  scale_y_percent() + 
   theme_minimal() +
-  labs(title="Penetración de tipo de App entre Gen Z y Millenial", 
-       caption="Elaboración propia con datos de la ENDITUH",
-       fill="Generación", x="Tipo App")#Gev vs Gen
+  labs(title="PenetraciÃ³n de tipo de App entre Gen Z y Millenial", 
+       caption="ElaboraciÃ³n propia con datos de la ENDITUH",
+       fill="GeneraciÃ³n", x="Tipo App")#Gev vs Gen
 
 ggplot(MCO, aes(Grupo,Respuesta,fill=reorder(Tipo, -Respuesta))) + 
   geom_bar(stat="identity", position = "dodge") +
@@ -245,8 +244,8 @@ geom_boxplot() + scale_fill_brewer(palette = 1) +
   theme_minimal() + 
   scale_y_continuous(breaks = seq(0,12,2)) +
   scale_x_continuous() + 
-  labs(title="Distribución de horas en internet por grupo generaciónal",
-       caption="Elaboración propia con datos de la ENDUTIH")
+  labs(title="DistribuciÃ³n de horas en internet por grupo generaciÃ³nal",
+       caption="ElaboraciÃ³n propia con datos de la ENDUTIH")
 
 #MCO
 Mco$Horas<-as.character(Mco$Horas)
@@ -258,7 +257,7 @@ summary(Corr
 stargazer(Corr)
 
 ##Tabla LaTex
-Tabla1<-data.frame("Tipo App"=c("Mensajería Instantanea", "Música streaming",
+Tabla1<-data.frame("Tipo App"=c("MensajerÃ­a Instantanea", "MÃºsica streaming",
                               "Video Streaming", "Taxi App", "Pagos App", "-"),
 "Red social"=c("Facebook","Instagram","Snapchat","Twitter","Whastapp",
                 "Youtube"))
@@ -266,11 +265,11 @@ stargazer(Tabla1)
 
 #Densidad
 
-### Distribución comparada Gen Z y Millenial entre las horas pasadas en internet
+### DistribuciÃ³n comparada Gen Z y Millenial entre las horas pasadas en internet
 # Y compras en linea, boxplot comparando
 #BarPlot
 
 
-### Heat Map -- Relación uso de tipos de Apps por Edad
+### Heat Map -- RelaciÃ³n uso de tipos de Apps por Edad
 
 #Filtrando preguntas sobre apps
