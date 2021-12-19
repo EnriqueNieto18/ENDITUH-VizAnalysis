@@ -5,3 +5,6 @@ This code will sort the data to questions related to social network usage. Aditi
 
 Finally, this code prepare normalize using Tydiver the data to ease its analisis for ggplot2 and for other stats libraries.
 
+
+
+[Generación.pdf](https://github.com/EnriqueNietoB/ENDITUH-VizAnalysis/files/7741543/Generacion.pdf)
