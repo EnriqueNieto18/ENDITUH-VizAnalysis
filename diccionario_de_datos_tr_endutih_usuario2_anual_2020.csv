@@ -1,0 +1,304 @@
+﻿CAMPO,DESCRIPCION,LONGITUD,TIPO_DATO,RANGO_VALIDO,METADATOS,,,
+UPM,Unidad primaria de muestreo,7,Varchar2,[0100026-3260770],Unidad primaria de muestreo,,,
+VIV_SEL,Vivienda seleccionada ,2,Varchar2,[01-24],Vivienda seleccionada ,,,
+HOGAR,Número de Hogar en la vivienda,2,Varchar2,[01-05],Número de Hogar en la vivienda,,,
+NUM_REN,Número de renglón,2,Varchar2,[01-21],Número de renglón,,,
+EDAD,Edad del elegido,2,Number,[0-99], ,,,
+FAC_PER,Factor,20,Number,[62-38370],Factor,,,
+UPM_DIS,Unidad primaria de muestreo,5,Varchar2,[00001-08237],Unidad primaria de muestreo,,,
+EST_DIS,Estrato de diseño muestral,3,Varchar2,[001-340],Estrato de diseño muestral,,,
+DOMINIO,Población rural y urbana,1,Varchar2,"[U,R]",Población rural y urbana,,,
+TLOC,Tamaño de la Localidad,1,Varchar2,[1-4],"1 100,000 y más habitantes, 2 15,000 a 99,999 habitantes, 3 2,500 a 14,999 habitantes, 4 menor a 2500 habitantes",,,
+ESTRATO,Estrato socioeconómico,1,Varchar2,[1-4],"1 Bajo, 2 Medio bajo, 3 Medio alto, 4 Alto",,,
+PAREN,3.3 ¿Qué es (NOMBRE) del jefe(a) del hogar?,1,Varchar2,[1-6],"1 Jefe(a), 2 Esposo(a) o compañero(a), 3 Hijo(a), 4 Nieto(a), 5 Otro parentesco, 6 Sin parentesco",,,
+SEXO,3.4 (NOMBRE) es hombre (NOMBRE) es mujer,1,Varchar2,[1-2],"1 Hombre, 2 Mujer",,,
+NIVEL,"3.8 ¿Hasta qué año o grado aprobó (NOMBRE) en la escuela? 
+Nivel",2,Varchar2,"[00-11],99","00 Ninguno, 01 Preescolar o kínder, 02 Primaria, 03 Secundaria, 04 Normal básica, 05 Estudio técnico terminal con secundaria, 06 Preparatoria o bachillerato, 07 Estudio técnico superior con preparatoria terminada, 08 Licenciatura o ingeniería, 09 Especialidad, 10 Maestría, 11 Doctorado, 99 No sabe",,,
+GRADO,"3.8 ¿Hasta qué año o grado aprobó (NOMBRE) en la escuela? 
+Grado",1,Varchar2,[0-9], ,,,
+P8_1,8.1 ¿Dispone usted de celular?,1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_2,8.2 ¿Por qué no dispone de un celular (común o Smartphone)?,1,Varchar2,[1-8],"1 Por falta de recursos económicos, 2 No le interesa o no lo necesita, 3 No hay servicio en su localidad (falta de infraestructura, cobertura de red), 4 Por razones relacionadas con la privacidad o seguridad, 5 No sabe utilizarlo, 6 No le permiten usarlo, 7 Por discapacidad física o mental, 8 Otra razón",,,
+P8_2A,8.2 ¿Por qué no dispone de un celular (común o Smartphone)? Especifique,100,Varchar2,[A-Z],,,,
+P8_3,"8.3 En los últimos tres meses, ¿ha usado usted teléfono celular común o inteligente (Smartphone)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_4_1,"8.4 ¿El celular que usa es…
+ común?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_4_2,"8.4 ¿El celular que usa es…
+ inteligente (Smartphone)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_5_1,"8.5 ¿Cuántos celulares utiliza del…
+ común?",3,Number,[01-09],,,,
+P8_5_2,"8.5 ¿Cuántos celulares utiliza del…
+ inteligente (Smartphone)?",3,Number,[01-09],,,,
+P8_6,"8.6 En los últimos tres meses, ¿con qué frecuencia utilizó el celular para hacer o recibir llamadas?",1,Varchar2,[1-4],"1 Diario (7 días a la semana), 2 Al menos una vez a la semana, 3 Una vez al mes, 4 Con otra frecuencia menor",,,
+P8_7_1,"8.7 El servicio de celular ¿lo paga por…
+ recarga de tiempo de aire (prepago)?",1,Varchar2,"[1-2,9]","1 Sí, 2 No, 9 No sabe",,,
+P8_7_2,"8.7 El servicio de celular ¿lo paga por…
+ paquetes (prepago)?",1,Varchar2,"[1-2,9]","1 Sí, 2 No, 9 No sabe",,,
+P8_7_3,"8.7 El servicio de celular ¿lo paga por…
+ plan tarifario (pospago)?",1,Varchar2,"[1-2,9]","1 Sí, 2 No, 9 No sabe",,,
+P8_8,8.8 ¿Cuál es su gasto promedio del mes en celular?,4,Number,[0010-9999],,,,
+P8_9,8.9 ¿Se encuentra satisfecho(a) con el servicio para hacer o recibir llamadas (servicio de voz)?,1,Varchar2,"[1-2,8]","1 Satisfecho, 2 Insatisfecho, 8 No quiso o no supo responder",,,
+P8_10,8.10 ¿Se conecta a Internet por medio de su celular inteligente (Smartphone)?,1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_11_1,"8.11 ¿Se conecta a Internet mediante…
+ Wifi?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_11_2,"8.11 ¿Se conecta a Internet mediante…
+ red celular (conexión de datos)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_1,"8.12 ¿Ha usado aplicaciones para...
+ mensajería instantánea (WhatsApp, Messenger, Telegram, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_2,"8.12 ¿Ha usado aplicaciones para...
+ acceder a contenidos de audio y video (Youtube, Spotify, Deezer, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_3,"8.12 ¿Ha usado aplicaciones para...
+  adquirir bienes o servicios (Cabify, Mercado Libre, Rappi, Uber, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_4,"8.12 ¿Ha usado aplicaciones para...
+ tránsito y navegación asistida (Google Maps, Waze, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_5,"8.12 ¿Ha usado aplicaciones para...
+ jugar (Pokemon go, Candy Crush, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_6,"8.12 ¿Ha usado aplicaciones para...
+ acceder a redes sociales (Facebook, Instagram, Twitter, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_7,"8.12 ¿Ha usado aplicaciones para...
+ acceder a Banca Móvil (Bancomer, Banamex, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_8,"8.12 ¿Ha usado aplicaciones para...
+ editar fotos o videos?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12_9,"8.12 ¿Ha usado aplicaciones para...
+ Otras aplicaciones?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_12A,"8.12 ¿Ha usado aplicaciones para... 
+ Otras aplicaciones Especifique",100,Varchar2,[A-Z],,,,
+P8_13,8.13 ¿Ha instalado alguna aplicación en su celular inteligente (Smartphone)?,1,Varchar2,"[1-2,9]","1 Sí, 2 No, 9 No sabe",,,
+P8_14_1,"8.14 ¿Las aplicaciones que ha instalado son…
+ gratuitas?",1,Varchar2,"[1-2,9]","1 Sí, 2 No, 9 No sabe",,,
+P8_14_2,"8.14 ¿Las aplicaciones que ha instalado son…
+ con costo?",1,Varchar2,"[1-2,9]","1 Sí, 2 No, 9 No sabe",,,
+P8_15_1,"8.15 ¿Ha instalado aplicaciones para…
+ mensajería instantánea (WhatsApp, Messenger, Telegram, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_2,"8.15 ¿Ha instalado aplicaciones para…
+ acceder a contenidos de audio y video (Youtube, Spotify, Deezer, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_3,"8.15 ¿Ha instalado aplicaciones para…
+  adquirir bienes o servicios (Cabify, Mercado Libre, Rappi, Uber, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_4,"8.15 ¿Ha instalado aplicaciones para…
+ tránsito y navegación asistida (Google Maps, Waze, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_5,"8.15 ¿Ha instalado aplicaciones para…
+ jugar (Pokemon go, Candy Crush, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_6,"8.15 ¿Ha instalado aplicaciones para…
+ acceder a redes sociales (Facebook, Instagram, Twitter, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_7,"8.15 ¿Ha instalado aplicaciones para…
+ acceder a Banca Móvil (Bancomer, Banamex, etcétera)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_8,"8.15 ¿Ha instalado aplicaciones para…
+editar fotos o videos?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15_9,"8.15 ¿Ha instalado aplicaciones para…
+ Otras aplicaciones?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P8_15A,"8.15 ¿Ha instalado aplicaciones para… 
+Otras aplicaciones Especifique",100,Varchar2,[A-Z],,,,
+P8_16,8.16 Generalmente ¿Con qué frecuencia hace uso de Internet con el celular inteligente (Smartphone)?,1,Varchar2,[1-6],"1 Diario (7 días a la semana), 2 Al menos una vez a la semana, 3 Una vez cada quince días, 4 Una vez al mes, 5 Al menos una vez cada seis meses, 6 Al menos una vez al año",,,
+P8_17,8.17 ¿Se encuentra satisfecho(a) con el servicio de datos (conexión de red) de su celular inteligente (Smartphone)?,1,Varchar2,"[1-2,8]","1 Satisfecho, 2 Insatisfecho, 8 No quiso o no supo responder",,,
+P9_1,"9.1 En la última semana, ¿usted escuchó la radio?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_2,9.2 ¿Por qué razón no escuchó la radio la semana pasada?,1,Varchar2,[1-5],"1 No le interesa o no lo necesita, 2 No cuenta con ningún aparato o dispositivo, 3 No hay servicio en su localidad (falta de infraestructura, cobertura de red), 4 Por discapacidad física o mental, 5 Otra razón",,,
+P9_2A,"9.2 ¿Por qué razón no escuchó la radio la semana pasada?
+Otra razón Especifique",100,Varchar2,[A-Z],,,,
+P9_3_1,"9.3 ¿Las estaciones que escucha son a través de la banda…
+ AM?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_3_2,"9.3 ¿Las estaciones que escucha son a través de la banda…
+ FM?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_4,"9.4 Principalmente, ¿qué dispositivo utilizó para escuchar la radio la semana pasada?",1,Varchar2,[1-7],"1 Estéreo/grabadora, 2 Radio del automóvil/transporte, 3 Radio portátil, 4 Teléfono celular, 5 Tablet, 6 Computadora, 7 Otro",,,
+P9_4A,"9.4 Principalmente, ¿qué dispositivo utilizó para escuchar la radio la semana pasada? 
+Otro Especifique",100,Varchar2,[A-Z],,,,
+P9_5,"9.5 Principalmente, ¿dónde escuchó la radio la semana pasada?",1,Varchar2,[1-5],"1 Hogar, 2 Automóvil, 3 Transporte público, 4 Trabajo, 5 Otro",,,
+P9_5A,"9.5 Principalmente, ¿dónde escuchó la radio la semana pasada?
+Otro Especifique",100,Varchar2,[A-Z],,,,
+P9_6,"9.6 En promedio, ¿cuántas horas al día dedicó a escuchar la radio la semana pasada?",2,Varchar2,[01-12],"01 Una hora o menos, 12 Doce horas o más",,,
+P9_7_1,"9.7 La semana pasada, escuchó en la radio programas de...
+ noticieros?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_7_2,"9.7 La semana pasada, escuchó en la radio programas de...
+ ciencia y tecnología?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_7_3,"9.7 La semana pasada, escuchó en la radio programas de...
+ entretenimiento?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_7_4,"9.7 La semana pasada, escuchó en la radio programas de...
+ arte?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_7_5,"9.7 La semana pasada, escuchó en la radio programas de...
+ deportes?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_7_6,"9.7 La semana pasada, escuchó en la radio programas de...
+ Otros",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_7A,"9.7 La semana pasada, escuchó en la radio programas de...
+Otros Especifique",100,Varchar2,[A-Z],,,,
+P9_8,"9.8 En la última semana, ¿vió televisión abierta?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_9,9.9 ¿Por qué razón no vio televisión abierta la semana pasada?,1,Varchar2,[1-5],"1 No le interesa o no lo necesita, 2 No cuenta con ningún aparato de Televisión, 3 No hay servicio en su localidad (falta de infraestructura, cobertura de red), 4 Por discapacidad física o mental, 5 Otra razón",,,
+P9_9A,"9.9 ¿Por qué razón no vio televisión abierta la semana pasada?
+Otra razón Especifique",100,Varchar2,[A-Z],,,,
+P9_10,"9.10 En promedio, ¿cuántas horas al día dedicó a ver televisión abierta la semana pasada?",2,Varchar2,[01-12],"01 Una hora o menos, 12 Doce horas o más",,,
+P9_11_1,"9.11 La semana pasada, ¿vio en televisión abierta...
+ noticieros?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_2,"9.11 La semana pasada, ¿vio en televisión abierta...
+ ciencia y tecnología?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_3,"9.11 La semana pasada, ¿vio en televisión abierta...
+ arte?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_4,"9.11 La semana pasada, ¿vio en televisión abierta...
+ películas?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_5,"9.11 La semana pasada, ¿vio en televisión abierta...
+ telenovelas?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_6,"9.11 La semana pasada, ¿vio en televisión abierta...
+ series?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_7,"9.11 La semana pasada, ¿vio en televisión abierta...
+ deportes?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_8,"9.11 La semana pasada, ¿vio en televisión abierta...
+ infantiles/caricaturas?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_9,"9.11 La semana pasada, ¿vio en televisión abierta...
+ concursos?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_10,"9.11 La semana pasada, ¿vio en televisión abierta...
+ reality show?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_11,"9.11 La semana pasada, ¿vio en televisión abierta...
+ magazine (HOY, Venga la alegría, etcétera.)?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_12,"9.11 La semana pasada, ¿vio en televisión abierta...
+ gobierno?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_13,"9.11 La semana pasada, ¿vio en televisión abierta...
+ religión?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_14,"9.11 La semana pasada, ¿vio en televisión abierta...
+ musicales?",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11_15,"9.11 La semana pasada, ¿vio en televisión abierta...
+ Otros",1,Varchar2,[1-2],"1 Sí, 2 No",,,
+P9_11A,"9.11 La semana pasada, ¿vio en televisión abierta...
+ Otros Especifique",100,Varchar2,[A-Z],,,,
+ENT,Entidad,2,Varchar2,[01-32],"01 Aguascalientes, 02 Baja California, 03 Baja California Sur, 04 Campeche, 05 Coahuila de Zaragoza, 06 Colimia, 07 Chiapas, 08 Chihuahua, 09 Ciudad de México, 10 Durango, 11 Guanajuato, 12 Guerrero, 13 Hidalgo, 14 Jalisco, 15 Estado de México, 16 Michoacán de Ocampo, 17 Morelos, 18 Nayarit, 19 Nuevo León, 20 Oaxaca, 21 Puebla, 22 Querétaro, 23 Quintana Roo, 24 San Luis Potosí, 25 Sinaloa, 26 Sonora, 27 Tabasco, 28 Tamaulipas, 29 Tlaxcala, 30 Veracruz de Ingancio de la Llave, 31 Yucatán, 32 Zacatecas",,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
