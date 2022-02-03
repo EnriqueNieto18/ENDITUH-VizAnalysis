@@ -6,3 +6,4 @@ This code will sort the data to questions related to social network usage. Aditi
 Some logit and probit are also made, so relationship between groups and using patterns can related. 
 
 Rhis code prepare normalize data using Tydiver the data to ease its analisis for ggplot2 and for other stats libraries.
+![RedesSociales_page-0001](https://user-images.githubusercontent.com/33914088/152440710-f133cc35-22f9-4eb2-90b5-5fe958d9c340.jpg)
